@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="dist/css/final.css">
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
@@ -89,7 +90,7 @@
     <section id="home" class="pt-40 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
-                <div class="w-full self-center px-4 lg:w-1/2">
+                <div class="w-full self-center px-4 mb-12 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary md:text-xl">Hallo Semua 🖐️,Saya <span
                             class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Abdul
                             Wahid</span></h1>
@@ -125,14 +126,14 @@
     <section id="about" class="pt-36 pb-32 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-10 lg:w-1/2">
+                <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-right" data-aos-duration="2000">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang saya</h4>
                     <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Yuk, belajar web
                         programing di polinema!</h2>
                     <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Doloribus velit incidunt nam saepe cumque culpa quisquam?</p>
                 </div>
-                <div class="w-full px-4 lg:w-1/2">
+                <div class="w-full px-4 lg:w-1/2" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="200">
                     <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Berteman
                     </h3>
                     <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum dolor sit amet
@@ -199,7 +200,7 @@
     <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
+                <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down" data-aos-duration="1000"  data-aos-easing="linear">
                     <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Project
                         Terbaru</h2>
@@ -210,7 +211,7 @@
             </div>
 
             <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-                <div class="mb-12 p-4 md:w-1/2">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -218,7 +219,7 @@
                     <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Blanditiis eius minima fuga!</p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -226,7 +227,7 @@
                     <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Blanditiis eius minima fuga!</p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -234,7 +235,7 @@
                     <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Blanditiis eius minima fuga!</p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600" data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -249,7 +250,7 @@
 
     <!-- Clients Section Start -->
     <section id="clients" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
-        <div class="container">
+        <div class="container" data-aos="fade-down" data-aos-duration="1000"  data-aos-easing="linear" >
             <div class="w-full px-4">
                 <div class="mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Clients</h4>
@@ -286,7 +287,7 @@
     <!-- Blog Section Start -->
     <section id="blog" class="pt-36 bg-slate-100 dark:bg-dark">
         <div class="container">
-            <div class="w-full px-4">
+            <div class="w-full px-4" data-aos="fade-up" data-aos-duration="1000"  data-aos-easing="linear" data-aos-delay="200">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Tulisan
@@ -297,7 +298,7 @@
             </div>
 
             <div class="flex flex-wrap">
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-right" data-aos-duration="800"  data-aos-easing="linear" data-aos-delay="200">
                     <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden mb-10">
                         <img src="dist/img/blog/computer.jpg" width="360" height="200" alt="programing" class="w-full">
                         <div class="py-8 px-6">
@@ -314,7 +315,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-duration="800"  data-aos-easing="linear" data-aos-delay="600">
                     <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden mb-10">
                         <img src="dist/img/blog/computer.jpg" width="360" height="200" alt="programing" class="w-full">
                         <div class="py-8 px-6">
@@ -331,7 +332,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="zoom-in-left" data-aos-duration="800"  data-aos-easing="linear" data-aos-delay="1000">
                     <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden mb-10">
                         <img src="dist/img/blog/computer.jpg" width="360" height="200" alt="programing" class="w-full">
                         <div class="py-8 px-6">
@@ -356,7 +357,7 @@
 
     <!-- Contact Section Start -->
     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
-        <div class="container">
+        <div class="container" data-aos="fade-down" data-aos-duration="800"  data-aos-easing="linear">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
@@ -507,6 +508,12 @@
         <span class="block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
     </a>
     <!-- Back to top End -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
     <script src="dist/js/script.js"></script>
 </body>
 
