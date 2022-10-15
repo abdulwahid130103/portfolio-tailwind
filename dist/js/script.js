@@ -39,15 +39,6 @@ const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
 
-// pindahkan posisi toggle sesuai mode
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    themeToggleLightIcon.classList.add('hidden');
-    themeToggleDarkIcon.classList.remove('hidden');
-} else {
-    themeToggleDarkIcon.classList.add('hidden');
-    themeToggleLightIcon.classList.remove('hidden');
-}
-
 const darkToggle = document.querySelector('#dark-toggle');
     
 darkToggle.addEventListener('click',function(){
@@ -76,3 +67,12 @@ darkToggle.addEventListener('click',function(){
     }
 });
 
+// pindahkan posisi toggle sesuai mode
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.classList.add('dark');
+    themeToggleLightIcon.classList.add('hidden');
+    themeToggleDarkIcon.classList.remove('hidden');
+} else {
+    themeToggleDarkIcon.classList.add('hidden');
+    themeToggleLightIcon.classList.remove('hidden');
+}

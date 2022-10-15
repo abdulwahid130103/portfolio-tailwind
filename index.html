@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="dist/css/final.css">
+    <link rel="stylesheet" href="dist/final.css">
     <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
+            document.documentElement.classList.add('dark');
         } else {
-            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.remove('dark');
         }
     </script>
 </head>
@@ -64,14 +65,20 @@
                             </li>
                             <li class="flex items-center pl-8 mt-3 lg:mt-0">
                                 <div class="flex">
-                                    <button id="dark-toggle" data-tooltip-target="tooltip-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                                        <svg aria-hidden="true" id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                                    <button id="dark-toggle" data-tooltip-target="tooltip-toggle" type="button"
+                                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                                        <svg aria-hidden="true" id="theme-toggle-dark-icon" class="w-5 h-5"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                            </path>
                                         </svg>
-                                        <svg aria-hidden="true" id="theme-toggle-light-icon" class=" w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                        <svg aria-hidden="true" id="theme-toggle-light-icon" class=" w-5 h-5"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                                fill-rule="evenodd" clip-rule="evenodd"></path>
                                         </svg>
-                                      </button>
+                                    </button>
                                 </div>
                             </li>
                         </ul>
@@ -196,7 +203,8 @@
     <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down" data-aos-duration="1000"  data-aos-easing="linear">
+                <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down" data-aos-duration="1000"
+                    data-aos-easing="linear">
                     <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Project
                         Terbaru</h2>
@@ -207,7 +215,8 @@
             </div>
 
             <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="linear">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200"
+                    data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -215,7 +224,8 @@
                     <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Blanditiis eius minima fuga!</p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" data-aos-easing="linear">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400"
+                    data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -223,7 +233,8 @@
                     <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Blanditiis eius minima fuga!</p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" data-aos-easing="linear">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"
+                    data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -231,7 +242,8 @@
                     <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Blanditiis eius minima fuga!</p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600" data-aos-easing="linear">
+                <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600"
+                    data-aos-easing="linear">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/one.jpg" alt="Landing Page" class="600px" height="300px">
                     </div>
@@ -246,7 +258,7 @@
 
     <!-- Clients Section Start -->
     <section id="clients" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
-        <div class="container" data-aos="fade-down" data-aos-duration="1000"  data-aos-easing="linear" >
+        <div class="container" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="linear">
             <div class="w-full px-4">
                 <div class="mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Clients</h4>
@@ -283,7 +295,8 @@
     <!-- Blog Section Start -->
     <section id="blog" class="pt-36 bg-slate-100 dark:bg-dark">
         <div class="container">
-            <div class="w-full px-4" data-aos="fade-up" data-aos-duration="1000"  data-aos-easing="linear" data-aos-delay="200">
+            <div class="w-full px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                data-aos-delay="200">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Tulisan
@@ -294,7 +307,8 @@
             </div>
 
             <div class="flex flex-wrap">
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-right" data-aos-duration="800"  data-aos-easing="linear" data-aos-delay="200">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-right" data-aos-duration="800"
+                    data-aos-easing="linear" data-aos-delay="200">
                     <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden mb-10">
                         <img src="dist/img/blog/computer.jpg" width="360" height="200" alt="programing" class="w-full">
                         <div class="py-8 px-6">
@@ -311,7 +325,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-duration="800"  data-aos-easing="linear" data-aos-delay="600">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-duration="800"
+                    data-aos-easing="linear" data-aos-delay="600">
                     <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden mb-10">
                         <img src="dist/img/blog/computer.jpg" width="360" height="200" alt="programing" class="w-full">
                         <div class="py-8 px-6">
@@ -328,7 +343,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="zoom-in-left" data-aos-duration="800"  data-aos-easing="linear" data-aos-delay="1000">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="zoom-in-left" data-aos-duration="800"
+                    data-aos-easing="linear" data-aos-delay="1000">
                     <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden mb-10">
                         <img src="dist/img/blog/computer.jpg" width="360" height="200" alt="programing" class="w-full">
                         <div class="py-8 px-6">
@@ -353,7 +369,7 @@
 
     <!-- Contact Section Start -->
     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
-        <div class="container" data-aos="fade-down" data-aos-duration="800"  data-aos-easing="linear">
+        <div class="container" data-aos="fade-down" data-aos-duration="800" data-aos-easing="linear">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
@@ -506,9 +522,9 @@
     <!-- Back to top End -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        once: true,
-      });
+        AOS.init({
+            once: true,
+        });
     </script>
     <script src="dist/js/script.js"></script>
 </body>
