@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="dist/final.css">
+    <link rel="stylesheet" href="dist/css/final.css">
     <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
