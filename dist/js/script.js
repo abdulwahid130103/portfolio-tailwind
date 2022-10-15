@@ -34,24 +34,45 @@ window.addEventListener('click',function(e){
 });
 
 // DarkMode toggle
-const darkToggle = document.querySelector('#dark-toggle');
 const html = document.querySelector('html');
-
-darkToggle.addEventListener('click',function(){
-    if(darkToggle.checked){
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
-    }else{
-        html.classList.remove('dark');
-        localStorage.theme = 'light';
-    }
-});
+const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
 
 // pindahkan posisi toggle sesuai mode
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
-    '(prefers-color-scheme: dark)').matches)) {
-    darkToggle.checked = true;
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.add('hidden');
+    themeToggleDarkIcon.classList.remove('hidden');
 } else {
-    ddarkToggle.checked = false;
+    themeToggleDarkIcon.classList.add('hidden');
+    themeToggleLightIcon.classList.remove('hidden');
 }
+
+const darkToggle = document.querySelector('#dark-toggle');
+    
+darkToggle.addEventListener('click',function(){
+    
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+            html.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            html.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
+
+    // if NOT set via local storage previously
+    } else {
+        if (document.documentElement.classList.contains('dark')) {
+            html.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        } else {
+            html.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        }
+    }
+});
+
